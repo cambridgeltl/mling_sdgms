@@ -1,6 +1,7 @@
-# Code repo Combining Deep Generative Models and Cross-lingual Pretraining for Semi-supervised Document Classification*
+# mling_sdgms
+This is the code repo for our EACL 2021 paper [Combining Deep Generative Models and Cross-lingual Petraining for Semi-supervised Document Classification](https://www.aclweb.org/anthology/2021.eacl-main.76.pdf).
 
-This file briefly explains the code for our EMNLP submission. The code structure is shown as follows  
+The code structure is shown as follows  
 
 ```
 .
@@ -29,11 +30,11 @@ This file briefly explains the code for our EMNLP submission. The code structure
 
 `train_xlsemicldc.py` is used to perform both supervised and semi-supervised *zero-shot cross-lingual* document classification.
 
-`requirements.txt` contains all the library dependencies generated from Conda.
+We use `pytorch 1.1.0`, and all library dependencies generated from Conda (there could be MANY useless/redundant dependencies) can be found in `requirements.txt`.
 
 The purpose of each folder is:
 
-`data_model` contains data reading module such as building vocabulary, converting text to its vocabulary id.
+`data_model` contains data reading module such as building vocabulary, converting text to its vocabulary id. NOTE that MLDoc (the dataset we use in our experiments) is not publicly available.
 
 `nn_model` contains all the neural model implementations, among which:
 - `xlingva.py` is the NXVAE model;
@@ -44,4 +45,4 @@ The purpose of each folder is:
 
 `utils` contains scripts about IO, preprocessing and the calculation of some common distributions.
 
-`train_bert` contains all the code on pretraining BERT and performing document classificaion with BERT.
+`train_bert` contains all the code on pretraining BERT and performing document classification with BERT.
